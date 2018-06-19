@@ -9,7 +9,7 @@ class RenderObservable extends Component {
     value: null,
   }
 
-  manageSubscription = (prevProps) => {
+  manageSubscription = (prevProps = {}) => {
     // this manages subscriptions if the observable prop changes
     if (this.props.observable !== prevProps.observable && this._subscription != null) {
         this._subscription.unsubscribe()
